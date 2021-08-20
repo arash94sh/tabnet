@@ -478,7 +478,7 @@ class TabNetNoEmbeddings(torch.nn.Module):
                 out.append(task_mapping(res))
         else:
             out = self.final_mapping(res)
-        return out, M_loss
+        return res, M_loss
 
     def forward_masks(self, x):
         return self.encoder.forward_masks(x)

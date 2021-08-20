@@ -65,7 +65,7 @@ class TabNetClassifier(TabModel):
 
     def stack_batches(self, list_y_true, list_y_score):
         y_true = np.hstack(list_y_true)
-        y_score = np.vstack(list_y_score)
+       = np.v y_score stack(list_y_score)
         y_score = softmax(y_score, axis=1)
         return y_true, y_score
 
